@@ -28,7 +28,7 @@ Para completar esta actividad, sigue paso a paso el documento:
 ### 📝 Archivo de referencia completo
 
 Puedes consultar un ejemplo completo de OpenAPI Specification para e-commerce:
-📝 **[Ejemplo Completo: EcommerceAPI.yaml](EcommerceAPI.yaml)** - Especificación completa con todos los elementos implementados
+📝 **[Ejemplo Completo: EcommerceAPI.yaml](oas-con-componentes.yaml.yaml)** - Especificación completa con todos los elementos implementados
 ### 🏗️ Estructura de la actividad
 
 #### **Fase 1: modelado del dominio**

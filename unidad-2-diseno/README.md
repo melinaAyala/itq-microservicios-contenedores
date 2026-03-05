@@ -47,34 +47,39 @@ Conceptos fundamentales organizados en tres módulos principales:
 
 ## 🔗 Conexión con el proyecto final
 
+
 Esta unidad establece el **diseño arquitectónico base** para el proyecto final:
 
 ### Bounded contexts del proyecto
 
-Aplicando DDD al **"Sistema de Ingesta y Procesamiento de Datos"**:
+Aplicando DDD al **"Sistema de E-commerce basado en microservicios"**:
 
-1. **Ingesta Context** - Recepción y validación inicial de datos
-   - Entidades: DataSource, IngestionJob, ValidationRule
-   - APIs: Ingestion API, Source Management API
+1. **Catálogo Context** - Gestión de productos y categorías
+   - Entidades: Product, Category, Inventory
+   - APIs: Product Catalog API
 
-2. **Processing Context** - Transformación y enriquecimiento
-   - Entidades: Pipeline, Transformation, ProcessingJob
-   - APIs: Pipeline Control API, Job Status API
+2. **Clientes Context** - Registro y gestión de clientes
+   - Entidades: Customer, Address, Profile
+   - APIs: Customer Management API
 
-3. **Storage Context** - Persistencia y consulta
-   - Entidades: Dataset, Query, StoragePolicy
-   - APIs: Query API, Metadata API
+3. **Pedidos Context** - Creación y seguimiento de pedidos
+   - Entidades: Order, OrderItem, Payment
+   - APIs: Order Management API
 
-4. **Monitoring Context** - Observabilidad y métricas
-   - Entidades: Metric, Alert, Dashboard
-   - APIs: Metrics API, Health Check API
+4. **Carrito Context** - Operaciones sobre el carrito de compras
+   - Entidades: Cart, CartItem
+   - APIs: Shopping Cart API
+
+5. **Pagos y Fulfillment Context** - Procesamiento de pagos y envíos
+   - Entidades: Payment, Shipment, Tracking
+   - APIs: Payment API, Fulfillment API
 
 ### Patrones arquitectónicos aplicables
 
 - **API Gateway:** Punto de entrada único para todas las APIs del sistema
-- **Saga Pattern:** Coordinación de pipelines de procesamiento multi-etapa
-- **CQRS:** Separación de APIs de ingesta (write) vs consulta (read)
-- **Event Sourcing:** Auditabilidad completa del procesamiento de datos
+- **Saga Pattern:** Coordinación de pedidos multi-etapa
+- **CQRS:** Separación de APIs de escritura (pedidos) vs consulta (historial)
+- **Event Sourcing:** Auditabilidad de operaciones de pedidos y pagos
 
 ---
 
